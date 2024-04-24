@@ -20,7 +20,6 @@
           tabindex="1"
           auto-complete="on"
         >
-          <svg-icon slot="prefix" icon-class="cs0" class="el-input__icon input-icon" />
         </el-input>
       </el-form-item>
 
@@ -35,7 +34,6 @@
           auto-complete="on"
           @keyup.enter.native="handleLogin"
         >
-          <svg-icon slot="prefix" icon-class="cs00" class="el-input__icon input-icon" />
         </el-input>
       </el-form-item>
 
