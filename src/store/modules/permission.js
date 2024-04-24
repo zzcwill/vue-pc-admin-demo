@@ -1,8 +1,7 @@
-import { constantRoutes } from '@/router';
 import { getRoutes } from '@/api/common';
 import { trunRouteName, trunRouteName2, trunRoutePath, validatenull } from '@/utils/config';
 // 模拟菜单返回数组，先前端处理，后期后端菜单配置好
-import { asyncRoutes } from '@mock/routes/routes';
+import { asyncRoutes } from '@/mock/routes/routes';
 
 // 对接口返回的路由做处理
 export const getApiRoutes = (apiData) => {
@@ -73,7 +72,7 @@ const state = {
 const mutations = {
   SET_ROUTES: (state, routes) => {
     state.addRoutes = routes;
-    state.routes = constantRoutes.concat(routes);
+    state.routes = routes;
   },
 };
 
@@ -87,9 +86,7 @@ const actions = {
           // 模拟接口返回对象
           data = asyncRoutes;
           let data2 = getApiRoutes(data);
-          // console.info(constantRoutes)
-          // console.info(data2)
-          let dataApi = formatRoutes(data2);
+          const dataApi = formatRoutes(data2);
 
           commit('SET_ROUTES', dataApi);
           resolve(dataApi);

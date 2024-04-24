@@ -8,7 +8,7 @@
       auto-complete="on"
       label-position="left"
     >
-      <h3 class="title">zzc-admin</h3>
+      <h3 class="title">admin</h3>
 
       <el-form-item prop="userName">
         <el-input
@@ -50,7 +50,7 @@
 
     <!--  底部  -->
     <div class="el-login-footer">
-      <span>Copyright © 2020-2021 zzc-admin All Rights Reserved.</span>
+      <span>Copyright © 2023-2024 admin All Rights Reserved.</span>
     </div>
   </div>
 </template>

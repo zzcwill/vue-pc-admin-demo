@@ -40,9 +40,8 @@ export default defineConfig({
   css: {
     // 预处理器配置项
     preprocessorOptions: {
-      less: {
-        //支持直接使用表达式 width: 100px - 20px;得到值为width:80px;
-        math: 'always',
+      sass: {
+        javascriptEnabled: true,
       },
     },
   },

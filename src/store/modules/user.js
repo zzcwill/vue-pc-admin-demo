@@ -1,6 +1,6 @@
 import { login, logout, getInfo } from '@/api/common';
 import { setToken, removeToken } from '@/utils/config';
-import { resetRouter } from '@/router';
+// import { resetRouter } from '@/router';
 import avatarPhoto from '@/assets/common/1.jpg';
 
 const state = {
@@ -54,7 +54,7 @@ const actions = {
         .then(() => {
           commit('SET_INFO', '');
           removeToken();
-          resetRouter();
+          // resetRouter();
           resolve();
         })
         .catch((error) => {

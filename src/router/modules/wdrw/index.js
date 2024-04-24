@@ -2,9 +2,9 @@ import Layout from '@/layout';
 
 const appRoute = [
   {
-    path: '/wdrw/wdrw/page',
+    path: '/wdrw',
     component: Layout,
-    hidden: true,
+    // hidden: true,
     children: [
       {
         path: 'info',
@@ -24,7 +24,7 @@ const appRoute = [
       },
       {
         path: 'flow',
-        name: 'wdrwWdrwPageFlow',
+        name: 'wdrwWdrwFlow',
         component: () => import('@/views/wdrw/wdrw/flow'),
         meta: {
           title: '贷款申请流程',

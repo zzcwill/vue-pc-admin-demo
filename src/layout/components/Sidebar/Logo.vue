@@ -26,7 +26,7 @@ export default {
   },
   data() {
     return {
-      title: 'zzc-admin',
+      title: 'admin',
       logo: avatarPhoto,
     };
   },

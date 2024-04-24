@@ -1,5 +1,5 @@
-# vue-h5
-> A vue-h5 demo project
+# vue-pc-admin
+> A vue-pc-admin-demo project
 
 ### node
 16.14.0
