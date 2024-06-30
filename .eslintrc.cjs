@@ -14,6 +14,7 @@ module.exports = {
     'prettier/prettier': ['error', require('./.prettierrc.js')],
     'vue/multi-word-component-names': 'off',
     'no-unused-vars': 'off',
-    'import/no-named-as-default-member': 'off'
+    'import/no-named-as-default-member': 'off',
+    'import/no-named-as-default': 'off'
   }
 };
