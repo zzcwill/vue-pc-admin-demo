@@ -56,7 +56,7 @@ import {
   loanApprovalInfoGetApprovalDocumentDir,
   loanApprovalInfoGetApprovalDocument,
   loanDocumentUploadFileString,
-  uploadNew,
+  uploadNew
 } from '@/api/wdrw/wdrw';
 
 export default {
@@ -83,7 +83,7 @@ export default {
       ],
       imgTreeDataProps: {
         children: 'children',
-        label: 'name',
+        label: 'name'
       },
 
       //上传图片-base64-start
@@ -94,8 +94,8 @@ export default {
       //上传图片-文件流上传-start
       streamImg: {
         user: 'zzc',
-        file: '',
-      },
+        file: ''
+      }
       //上传图片-文件流上传-end
     };
   },
@@ -111,7 +111,7 @@ export default {
         loanApplyId: this.projectId,
         fileNamespace: this.$route.query.space,
         releventFlow: this.$route.query.releventFlow,
-        releventFlowNode: this.$route.query.releventFlowNode,
+        releventFlowNode: this.$route.query.releventFlowNode
       };
       let apiData = await loanApprovalInfoGetApprovalDocumentDir(params);
       let imgArr = [];
@@ -126,7 +126,7 @@ export default {
         fileNamespace: this.$route.query.space,
         releventFlow: this.$route.query.releventFlow,
         releventFlowNode: this.$route.query.releventFlowNode,
-        dirId: this.currentDirId,
+        dirId: this.currentDirId
       };
       let apiData = await loanApprovalInfoGetApprovalDocument(params);
       // console.log(apiData.data)
@@ -161,7 +161,7 @@ export default {
           releventFlowNode: this.$route.query.releventFlowNode,
           dirId: this.currentDirId,
           'LoanDocuments[0].fileName': file.file.name,
-          'LoanDocuments[0].filePath': this.imgCode,
+          'LoanDocuments[0].filePath': this.imgCode
         };
         let apiData = await loanDocumentUploadFileString(params);
 
@@ -183,9 +183,9 @@ export default {
       if (apiData) {
         this.$message(apiData.message);
       }
-    },
+    }
     //上传图片-文件流上传-end
-  },
+  }
 };
 </script>
 <style lang="scss" scoped></style>

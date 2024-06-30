@@ -18,7 +18,7 @@ export default {
       this.$router.push({ path: '/' });
     }
   },
-  methods: {},
+  methods: {}
 };
 </script>
 

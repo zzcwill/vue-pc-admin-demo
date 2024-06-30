@@ -4,7 +4,7 @@ export function zaRoleList(data) {
   return request({
     url: '/za/role/list',
     method: 'post',
-    data,
+    data
   });
 }
 
@@ -12,7 +12,7 @@ export function zaRoleAdd(data) {
   return request({
     url: '/za/role/add',
     method: 'post',
-    data,
+    data
   });
 }
 
@@ -20,6 +20,6 @@ export function zaRoleUpdate(data) {
   return request({
     url: '/za/role/update',
     method: 'post',
-    data,
+    data
   });
 }

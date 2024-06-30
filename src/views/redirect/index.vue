@@ -8,6 +8,6 @@ export default {
   render: function (h) {
     // avoid warning message
     return h();
-  },
+  }
 };
 </script>

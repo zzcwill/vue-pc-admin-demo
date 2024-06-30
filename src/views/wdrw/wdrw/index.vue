@@ -201,10 +201,10 @@ export default {
     isSecondHandCarFilter(value) {
       let arr = ['', '是', '否'];
       return arr[value] || '--';
-    },
+    }
   },
   components: {
-    Pagination,
+    Pagination
   },
   data() {
     return {
@@ -216,7 +216,7 @@ export default {
         flowNode: '',
         createDateTimeStart: '',
         createDateTimeOver: '',
-        isProcessed: false,
+        isProcessed: false
       },
       rules: {
         // cname: [{ required: true, message: '请输入客户信息', trigger: 'blur' }],
@@ -227,11 +227,11 @@ export default {
       tableData: {
         tableLoading: true,
         tableList: [],
-        tableTotal: 0,
+        tableTotal: 0
       },
       ftCodeOptions: [],
       flowNodeOptions: [],
-      activeTabName: 'todo',
+      activeTabName: 'todo'
     };
   },
   created() {
@@ -263,8 +263,8 @@ export default {
         query: {
           projectId: row.businessId,
           bopInfoId: row.businessObjectProcessInfoId,
-          currentNodeName: row.currentNodeName,
-        },
+          currentNodeName: row.currentNodeName
+        }
       });
     },
     toOperate2(row) {
@@ -275,16 +275,16 @@ export default {
           currentNodeName: row.currentNodeName,
           space: 'LOAN',
           releventFlow: row.businessTypeCode,
-          releventFlowNode: row.currentNodeKey,
-        },
+          releventFlowNode: row.currentNodeKey
+        }
       });
     },
     toOperate3(row) {
       this.$router.push({
         path: '/wdrw/wdrw/page/info',
         query: {
-          projectId: row.businessId,
-        },
+          projectId: row.businessId
+        }
       });
     },
     async getTableList() {
@@ -304,7 +304,7 @@ export default {
       this.searchForm.flowNode = '';
 
       let data = {
-        businessTypeCode: val,
+        businessTypeCode: val
       };
       let apiData = await flowNodes(data);
       this.flowNodeOptions = apiData.data;
@@ -322,8 +322,8 @@ export default {
       let data = '?customerName=老大哥';
       let exportUrl = customerCreditInfoDownload() + data;
       window.location.href = exportUrl;
-    },
-  },
+    }
+  }
 };
 </script>
 <style lang="scss" scoped></style>

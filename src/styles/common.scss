@@ -5,7 +5,7 @@
 //浮动、清除浮动
 .clearfix {
   &:after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
   }
@@ -66,11 +66,11 @@
 .align-i-c {
   align-items: center;
 }
-.align-i-fs{
-  align-items: flex-start
+.align-i-fs {
+  align-items: flex-start;
 }
-.align-i-fe{
-  align-items: flex-end
+.align-i-fe {
+  align-items: flex-end;
 }
 
 // 文字位置设置
@@ -89,7 +89,7 @@
 
 //颜色
 .color-w {
-  color: #fff!important;
+  color: #fff !important;
 }
 .bg-b {
   background: #000 !important;
@@ -120,11 +120,10 @@
   border-bottom: solid 1px #eee;
 }
 
-
 @for $counter from 1 through 40 {
   .f-s-#{$counter} {
     font-size: (1px * $counter);
-  }  
+  }
 }
 
 @for $counter from 1 through 100 {

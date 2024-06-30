@@ -44,16 +44,16 @@ export default {
     // route object
     item: {
       type: Object,
-      required: true,
+      required: true
     },
     isNest: {
       type: Boolean,
-      default: false,
+      default: false
     },
     basePath: {
       type: String,
-      default: '',
-    },
+      default: ''
+    }
   },
   data() {
     this.onlyOneChild = null;
@@ -89,7 +89,7 @@ export default {
         return this.basePath;
       }
       return path.resolve(this.basePath, routePath);
-    },
-  },
+    }
+  }
 };
 </script>

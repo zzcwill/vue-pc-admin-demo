@@ -21,7 +21,7 @@ export default {
     Navbar,
     Sidebar,
     TagsView,
-    AppMain,
+    AppMain
   },
   mixins: [ResizeMixin],
   computed: {
@@ -31,11 +31,11 @@ export default {
     classObj() {
       return {
         hideSidebar: !this.sidebar.opened,
-        openSidebar: this.sidebar.opened,
+        openSidebar: this.sidebar.opened
       };
-    },
+    }
   },
-  methods: {},
+  methods: {}
 };
 </script>
 

@@ -76,16 +76,16 @@ export default {
     return {
       loginForm: {
         userName: '18088888888',
-        password: '123456a',
+        password: '123456a'
         // userName: '15268100211',
         // password: ''
       },
       loginRules: {
         userName: [{ required: true, trigger: 'blur', validator: validateUsername }],
-        password: [{ required: true, trigger: 'blur', validator: validatePassword }],
+        password: [{ required: true, trigger: 'blur', validator: validatePassword }]
       },
       loading: false,
-      redirect: this.$route.query.redirect,
+      redirect: this.$route.query.redirect
     };
   },
   methods: {
@@ -107,8 +107,8 @@ export default {
           return false;
         }
       });
-    },
-  },
+    }
+  }
 };
 </script>
 

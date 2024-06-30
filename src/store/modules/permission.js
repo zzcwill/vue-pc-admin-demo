@@ -19,7 +19,7 @@ export const getApiRoutes = (apiData) => {
 
     let meta = {
       title: menuName,
-      icon: validatenull(menuPicUrl) ? '' : menuPicUrl,
+      icon: validatenull(menuPicUrl) ? '' : menuPicUrl
     };
 
     if (!isMenuLevelOne) {
@@ -32,7 +32,7 @@ export const getApiRoutes = (apiData) => {
         component: component,
         name: name,
         meta: meta,
-        children: validatenull(nextSubs) ? [] : getApiRoutes(nextSubs),
+        children: validatenull(nextSubs) ? [] : getApiRoutes(nextSubs)
       };
       aRouter.push(oRouter);
     }
@@ -51,7 +51,7 @@ export const formatRoutes = (aMenu) => {
       redirect: redirect,
       name: name,
       meta: meta,
-      children: validatenull(children) ? [] : formatRoutes(children),
+      children: validatenull(children) ? [] : formatRoutes(children)
     };
     if (oRouter.children.length === 0) {
       delete oRouter.children;
@@ -66,14 +66,14 @@ export const formatRoutes = (aMenu) => {
 
 const state = {
   routes: [],
-  addRoutes: [],
+  addRoutes: []
 };
 
 const mutations = {
   SET_ROUTES: (state, routes) => {
     state.addRoutes = routes;
     state.routes = routes;
-  },
+  }
 };
 
 const actions = {
@@ -95,12 +95,12 @@ const actions = {
           reject(error);
         });
     });
-  },
+  }
 };
 
 export default {
   namespaced: true,
   state,
   mutations,
-  actions,
+  actions
 };

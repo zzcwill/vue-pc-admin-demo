@@ -11,7 +11,7 @@ export default {
     const isMobile = judgeMobile();
     if (isMobile) {
       this.$router.push({
-        path: '/nopc',
+        path: '/nopc'
       });
     }
   },
@@ -21,10 +21,10 @@ export default {
         const isMobile = judgeMobile();
         if (isMobile) {
           this.$router.push({
-            path: '/nopc',
+            path: '/nopc'
           });
         }
       }
-    },
-  },
+    }
+  }
 };

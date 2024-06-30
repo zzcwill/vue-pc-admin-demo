@@ -2,8 +2,8 @@ import Cookies from 'js-cookie';
 
 const state = {
   sidebar: {
-    opened: Cookies.get('sidebarStatus') ? !!+Cookies.get('sidebarStatus') : true,
-  },
+    opened: Cookies.get('sidebarStatus') ? !!+Cookies.get('sidebarStatus') : true
+  }
 };
 
 const mutations = {
@@ -18,7 +18,7 @@ const mutations = {
   CLOSE_SIDEBAR: (state) => {
     Cookies.set('sidebarStatus', 0);
     state.sidebar.opened = false;
-  },
+  }
 };
 
 const actions = {
@@ -27,12 +27,12 @@ const actions = {
   },
   closeSideBar({ commit }) {
     commit('CLOSE_SIDEBAR');
-  },
+  }
 };
 
 export default {
   namespaced: true,
   state,
   mutations,
-  actions,
+  actions
 };

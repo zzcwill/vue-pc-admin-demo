@@ -37,7 +37,7 @@
 
 <script>
 import ScrollPane from './ScrollPane';
-import path from "path-browserify";
+import path from 'path-browserify';
 
 export default {
   components: { ScrollPane },
@@ -47,7 +47,7 @@ export default {
       top: 0,
       left: 0,
       selectedTag: {},
-      affixTags: [],
+      affixTags: []
     };
   },
   computed: {
@@ -56,7 +56,7 @@ export default {
     },
     routes() {
       return this.$store.state.permission.routes;
-    },
+    }
   },
   watch: {
     $route() {
@@ -69,7 +69,7 @@ export default {
       } else {
         document.body.removeEventListener('click', this.closeMenu);
       }
-    },
+    }
   },
   mounted() {
     this.initTags();
@@ -88,7 +88,7 @@ export default {
             fullPath: tagPath,
             path: tagPath,
             name: route.name,
-            meta: { ...route.meta },
+            meta: { ...route.meta }
           });
         }
         if (route.children) {
@@ -136,7 +136,7 @@ export default {
         const { fullPath } = view;
         this.$nextTick(() => {
           this.$router.replace({
-            path: '/redirect' + fullPath,
+            path: '/redirect' + fullPath
           });
         });
       });
@@ -208,8 +208,8 @@ export default {
       if (command === '2') {
         this.closeAllTags(this.selectedTag);
       }
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -219,7 +219,9 @@ export default {
   width: 100%;
   background: #fff;
   border-bottom: 1px solid #d8dce5;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 0 3px 0 rgba(0, 0, 0, 0.04);
+  box-shadow:
+    0 1px 3px 0 rgba(0, 0, 0, 0.12),
+    0 0 3px 0 rgba(0, 0, 0, 0.04);
   .tags-view-wrapper {
     .tags-view-item {
       display: inline-block;

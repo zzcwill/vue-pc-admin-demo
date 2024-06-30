@@ -47,21 +47,21 @@ export function login(data) {
   return request({
     url: '/login',
     method: 'post',
-    data,
+    data
   });
 }
 //退出
 export function logout() {
   return request({
     url: '/logout',
-    method: 'post',
+    method: 'post'
   });
 }
 //获取用户信息
 export function getInfo() {
   return request({
     url: '/user/session/get',
-    method: 'post',
+    method: 'post'
   });
 }
 //获取路由
@@ -70,7 +70,7 @@ export function getRoutes() {
     url: '/za/menu/list',
     method: 'post',
     data: {
-      st: 'CLS_WEB_BEFORE',
-    },
+      st: 'CLS_WEB_BEFORE'
+    }
   });
 }

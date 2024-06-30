@@ -99,7 +99,7 @@ import {
   loanApprovalInfoGetApprovalBaseInfo,
   opinionSave,
   loanReviewPreSubmit,
-  loanReviewSubmit2next,
+  loanReviewSubmit2next
 } from '@/api/wdrw/wdrw';
 
 export default {
@@ -112,12 +112,12 @@ export default {
       searchForm: {
         customerName: '',
         domicileType: '',
-        sex: '',
+        sex: ''
       },
       flowOpinion: {
         conclusion: 1,
         opinion: '',
-        bopInfoId: '',
+        bopInfoId: ''
       },
       rules: {
         // customerName: [{ required: true, message: '请输入客户信息', trigger: 'blur' }],
@@ -125,25 +125,25 @@ export default {
       domicileTypeOptions: [
         {
           name: '农业',
-          value: 1,
+          value: 1
         },
         {
           name: '非农',
-          value: 2,
-        },
+          value: 2
+        }
       ],
       sexOptions: [
         {
           name: '男',
-          value: 1,
+          value: 1
         },
         {
           name: '女',
-          value: 0,
-        },
+          value: 0
+        }
       ],
       domArr: [1, 2],
-      domArr2: [1, 2, 3, 4],
+      domArr2: [1, 2, 3, 4]
     };
   },
   computed: {
@@ -152,7 +152,7 @@ export default {
     },
     routes() {
       return this.$store.state.permission.routes;
-    },
+    }
   },
   created() {
     this.title = this.$route.query.currentNodeName;
@@ -164,7 +164,7 @@ export default {
     async getLoanInfo() {
       //自行改接扣调用
       let params = {
-        loanApplyId: this.projectId,
+        loanApplyId: this.projectId
       };
       let apiData = await loanApprovalInfoGetApprovalBaseInfo(params);
 
@@ -173,20 +173,20 @@ export default {
     async submitSearchTable() {
       this.$confirm('贷款流程提交下一步，是否确认？', '提示', {
         confirmButtonText: '确定',
-        cancelButtonText: '取消',
+        cancelButtonText: '取消'
       })
         .then(async () => {
           let isOption = await opinionSave(this.flowOpinion);
 
           if (isOption) {
             let predata = await loanReviewPreSubmit({
-              loanApplyId: this.projectId,
+              loanApplyId: this.projectId
             });
             if (predata.data.userTasks.length) {
               let submitData = await loanReviewSubmit2next({
                 nextNodeUserName: predata.data.userTasks[0].userName,
                 nextNodeUserId: predata.data.userTasks[0].userId,
-                loanApplyId: this.projectId,
+                loanApplyId: this.projectId
               });
               if (submitData) {
                 this.$message(submitData.message);
@@ -230,9 +230,9 @@ export default {
           this.$router.push('/');
         }
       }
-    },
+    }
     //关闭当前页end
-  },
+  }
 };
 </script>
 <style lang="scss" scoped></style>

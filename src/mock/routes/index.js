@@ -8,8 +8,8 @@ export default [
     response: (_) => {
       return {
         code: 10000,
-        data: asyncRoutes,
+        data: asyncRoutes
       };
-    },
-  },
+    }
+  }
 ];

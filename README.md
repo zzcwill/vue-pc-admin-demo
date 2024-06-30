@@ -1,13 +1,14 @@
-# vue-pc-admin
-> A vue-pc-admin-demo project
+# vue-pc-admin-demo
 
-### node
-16.14.0
+> vue-pc-admin-demo
 
-### 项目运行
-- yarn install
-- yarn dev
-- yarn build
-- 打包预览
-- yarn preview
-- yarn lint
+# node
+
+- node >= 18
+- nvm use 18.20.2
+
+# dev
+
+- pnpm i
+- pnpm dev
+- pnpm build

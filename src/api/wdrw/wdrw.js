@@ -5,20 +5,20 @@ export function mytasksSearch(data) {
   return request({
     url: '/mytasks/search',
     method: 'post',
-    data,
+    data
   });
 }
 export function flowGet() {
   return request({
     url: '/flow/get',
-    method: 'post',
+    method: 'post'
   });
 }
 export function flowNodes(data) {
   return request({
     url: '/flow/nodes',
     method: 'post',
-    data,
+    data
   });
 }
 export function customerCreditInfoDownload() {
@@ -31,7 +31,7 @@ export function loanApprovalInfoGetApprovalBaseInfo(data) {
   return request({
     url: '/loanApprovalInfo/getApprovalBaseInfo',
     method: 'post',
-    data,
+    data
   });
 }
 //贷款详情end
@@ -41,21 +41,21 @@ export function opinionSave(data) {
   return request({
     url: '/opinion/save',
     method: 'post',
-    data,
+    data
   });
 }
 export function loanReviewPreSubmit(data) {
   return request({
     url: '/loanReview/preSubmit',
     method: 'post',
-    data,
+    data
   });
 }
 export function loanReviewSubmit2next(data) {
   return request({
     url: '/loanReview/submit2next',
     method: 'post',
-    data,
+    data
   });
 }
 //贷款流程页end
@@ -65,14 +65,14 @@ export function loanApprovalInfoGetApprovalDocumentDir(data) {
   return request({
     url: '/loanApprovalInfo/getApprovalDocumentDir',
     method: 'post',
-    data,
+    data
   });
 }
 export function loanApprovalInfoGetApprovalDocument(data) {
   return request({
     url: '/loanApprovalInfo/getApprovalDocument',
     method: 'post',
-    data,
+    data
   });
 }
 //上传图片-base64
@@ -80,7 +80,7 @@ export function loanDocumentUploadFileString(data) {
   return request({
     url: '/loanDocument/uploadFileString',
     method: 'post',
-    data,
+    data
   });
 }
 //上传图片-文件流
@@ -91,14 +91,14 @@ export function uploadNew(data) {
     method: 'post',
     data,
     headers: {
-      'Content-Type': 'multipart/form-data',
+      'Content-Type': 'multipart/form-data'
     },
     transformRequest: [
       function (data) {
         return data;
-      },
+      }
     ],
-    baseURL: '/egg',
+    baseURL: '/egg'
   });
 }
 //多媒体资料页end

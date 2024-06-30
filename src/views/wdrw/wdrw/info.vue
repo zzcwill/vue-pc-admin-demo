@@ -73,7 +73,7 @@ export default {
       searchForm: {
         customerName: '',
         domicileType: '',
-        sex: '',
+        sex: ''
       },
       rules: {
         // customerName: [{ required: true, message: '请输入客户信息', trigger: 'blur' }],
@@ -81,25 +81,25 @@ export default {
       domicileTypeOptions: [
         {
           name: '农业',
-          value: 1,
+          value: 1
         },
         {
           name: '非农',
-          value: 2,
-        },
+          value: 2
+        }
       ],
       sexOptions: [
         {
           name: '男',
-          value: 1,
+          value: 1
         },
         {
           name: '女',
-          value: 0,
-        },
+          value: 0
+        }
       ],
       domArr: [1, 2],
-      domArr2: [1, 2, 3, 4],
+      domArr2: [1, 2, 3, 4]
     };
   },
   created() {
@@ -110,13 +110,13 @@ export default {
     async getLoanInfo() {
       //自行改接扣调用
       let params = {
-        loanApplyId: this.projectId,
+        loanApplyId: this.projectId
       };
       let apiData = await loanApprovalInfoGetApprovalBaseInfo(params);
 
       this.searchForm = this._.pick(apiData.data, ['customerName', 'domicileType', 'sex']);
-    },
-  },
+    }
+  }
 };
 </script>
 <style lang="scss" scoped></style>

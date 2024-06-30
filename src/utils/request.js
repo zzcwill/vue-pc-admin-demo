@@ -1,9 +1,9 @@
-import Axios from 'axios';
+import axios from 'axios';
 import { Message } from 'element-ui';
 import { getToken } from '@/utils/config';
-import Qs from 'qs';
+import qs from 'qs';
 
-const http = Axios.create({
+const http = axios.create({
   // api的base_url
   baseURL: import.meta.env.VITE_BASE_API,
   timeout: 5000,
@@ -11,15 +11,15 @@ const http = Axios.create({
     //后端json
     //  'Content-Type': 'application/json;charset=UTF-8'
     //后端表单
-    'Content-Type': 'application/x-www-form-urlencoded',
+    'Content-Type': 'application/x-www-form-urlencoded'
   },
   //后端表单application/x-www-form-urlencoded的参数转对象
   transformRequest: [
     function (data) {
-      data = Qs.stringify(data);
+      data = qs.stringify(data);
       return data;
-    },
-  ],
+    }
+  ]
 });
 
 // 设置请求头
@@ -42,7 +42,7 @@ http.interceptors.response.use(
       Message({
         message: res.message || 'Error',
         type: 'error',
-        duration: 5 * 1000,
+        duration: 5 * 1000
       });
       return;
     }
@@ -55,7 +55,7 @@ http.interceptors.response.use(
       Message({
         message: err,
         type: 'error',
-        duration: 5 * 1000,
+        duration: 5 * 1000
       });
     }
   }

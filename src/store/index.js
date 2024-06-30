@@ -1,5 +1,5 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
+import vue from 'vue';
+import vuex from 'vuex';
 import getters from './getters';
 
 import app from './modules/app';
@@ -7,16 +7,16 @@ import permission from './modules/permission';
 import tagsView from './modules/tagsView';
 import user from './modules/user';
 
-Vue.use(Vuex);
+vue.use(vuex);
 
-const store = new Vuex.Store({
+const store = new vuex.Store({
   modules: {
     app,
     permission,
     tagsView,
-    user,
+    user
   },
-  getters,
+  getters
 });
 
 export default store;

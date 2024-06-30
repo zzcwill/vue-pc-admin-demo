@@ -4,13 +4,13 @@ import { setToken, removeToken } from '@/utils/config';
 import avatarPhoto from '@/assets/common/1.jpg';
 
 const state = {
-  userInfo: '',
+  userInfo: ''
 };
 
 const mutations = {
   SET_INFO: (state, info) => {
     state.userInfo = info;
-  },
+  }
 };
 
 const actions = {
@@ -61,12 +61,12 @@ const actions = {
           reject(error);
         });
     });
-  },
+  }
 };
 
 export default {
   namespaced: true,
   state,
   mutations,
-  actions,
+  actions
 };

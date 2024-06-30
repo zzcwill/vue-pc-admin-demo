@@ -7,10 +7,10 @@ export default [
       return {
         code: 10000,
         data: {
-          token: 'mock-token',
-        },
+          token: 'mock-token'
+        }
       };
-    },
+    }
   },
 
   // get user info
@@ -21,10 +21,10 @@ export default [
       return {
         code: 10000,
         data: {
-          realname: 'zzc',
-        },
+          realname: 'zzc'
+        }
       };
-    },
+    }
   },
 
   // user logout
@@ -34,8 +34,8 @@ export default [
     response: (_) => {
       return {
         code: 10000,
-        data: '',
+        data: ''
       };
-    },
-  },
+    }
+  }
 ];

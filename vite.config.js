@@ -8,8 +8,8 @@ export default defineConfig({
     vue2(),
     legacy({
       targets: ['ie >= 11'],
-      additionalLegacyPolyfills: ['regenerator-runtime/runtime'],
-    }),
+      additionalLegacyPolyfills: ['regenerator-runtime/runtime']
+    })
   ],
   server: {
     // 服务器主机名，默认是 localhost
@@ -23,31 +23,31 @@ export default defineConfig({
         target: 'https://cnodejs.org/api/v1',
         changeOrigin: true,
         ws: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
-      },
+        rewrite: (path) => path.replace(/^\/api/, '')
+      }
     },
     // 是否开启自动刷新
     hmr: true,
     // 是否开启自动打开浏览器
-    open: true,
+    open: true
   },
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@': fileURLToPath(new URL('./src', import.meta.url))
     },
-    extensions: ['.js', '.vue'],
+    extensions: ['.js', '.vue']
   },
   css: {
     // 预处理器配置项
     preprocessorOptions: {
       sass: {
-        javascriptEnabled: true,
-      },
-    },
+        javascriptEnabled: true
+      }
+    }
   },
   build: {
     outDir: 'dist',
     // 生产环境是否生成 source map 文件
-    sourcemap: false,
-  },
+    sourcemap: false
+  }
 });

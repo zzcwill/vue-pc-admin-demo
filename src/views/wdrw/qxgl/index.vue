@@ -101,31 +101,31 @@ export default {
   name: 'wdrwQxgl',
   filters: {},
   components: {
-    Pagination,
+    Pagination
   },
   data() {
     return {
       searchForm: {
         page: 1,
         pageSize: 10,
-        name: '',
+        name: ''
       },
       rules: {},
       tableData: {
         tableLoading: true,
         tableList: [],
-        tableTotal: 0,
+        tableTotal: 0
       },
       dialogForm: {
         name: '',
         note: '',
-        id: '',
+        id: ''
       },
       dialogRules: {
-        name: [{ required: true, message: '请输入角色信息', trigger: 'blur' }],
+        name: [{ required: true, message: '请输入角色信息', trigger: 'blur' }]
       },
       dialogFormVisible: false,
-      isNewPerson: true,
+      isNewPerson: true
     };
   },
   created() {
@@ -198,13 +198,13 @@ export default {
       this.dialogForm = {
         name: '',
         note: '',
-        id: '',
+        id: ''
       };
     },
     openDialogForm() {
       this.dialogFormVisible = true;
-    },
-  },
+    }
+  }
 };
 </script>
 <style lang="scss" scoped></style>
