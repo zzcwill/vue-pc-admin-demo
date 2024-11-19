@@ -1,5 +1,5 @@
 // 公用接口方法定义在这里
-import request from '@/utils/request';
+import request from '@/api/request';
 
 // post-demo
 // export function login(data) {

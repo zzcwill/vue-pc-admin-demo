@@ -1,4 +1,4 @@
-import request from '@/utils/request';
+import request from '@/api/request';
 
 //查询列表页start
 export function mytasksSearch(data) {

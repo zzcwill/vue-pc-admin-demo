@@ -10,6 +10,6 @@ export const constantRoutes = app.concat(wdrw);
 
 export default new VueRouter({
   mode: 'history',
-  // base: import.meta.env.VITE_BASE_URL,
+  // base: '/pc',
   routes: constantRoutes
 });
